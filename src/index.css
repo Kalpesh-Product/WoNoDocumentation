@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Custom thin gray scrollbar */
+::-webkit-scrollbar {
+  width: 2px;   /* vertical scrollbar */
+  height: 4px;  /* horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9ca3af; /* gray-400 */
+  border-radius: 9999px;     /* full rounded */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
