@@ -4,6 +4,7 @@ import Layout from "./Layout/Layout.jsx";
 import WorkflowSection from "./pages/NomadFlow.jsx";
 import MajorFlow from "./pages/MajorFlow.jsx";
 import HostPanel from "./pages/HostPanel.jsx";
+import sections from "./sections.js";
 
 const Home = () => {
   return (
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
     element: <Layout />, // ✅ Wrap everything with Layout
     children: [
       { index: true, element: <Home /> }, // default "/" route
-      { path: "nomad", element: <WorkflowSection /> },
+      { path: "nomad", element: <WorkflowSection sectionData={sections}/> },
       { path: "major-flow", element: <MajorFlow /> },
       { path: "host-panel", element: <HostPanel /> },
     ],

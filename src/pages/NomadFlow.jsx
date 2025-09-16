@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import sections from "../sections.js";
 
-const NomadFlow = () => {
+const NomadFlow = ({sectionData}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("user"); // "user" | "system"
 
@@ -13,13 +13,13 @@ const NomadFlow = () => {
   };
 
   return (
-    <div className="p-6 bg-transparent text-white mx-auto border-[1px] border-dashed border-gray-700 border-t-0 max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="p-6 bg-transparent text-white mx-auto border-[1px] border-dashed border-gray-700 border-t-0 max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* Left column → scrollable text with snap */}
       <div
         className="h-screen overflow-y-scroll snap-y snap-mandatory pr-4"
         onScroll={handleScroll}
       >
-        {sections.map((section) => (
+        {sectionData.map((section) => (
           <div
             key={section.id}
             className="h-screen snap-start flex flex-col justify-center space-y-6"
@@ -66,8 +66,8 @@ const NomadFlow = () => {
       <div className="hidden md:flex justify-center items-center">
         <div className="sticky top-20">
           <img
-            src={sections[activeIndex]?.image}
-            alt={sections[activeIndex]?.title}
+            src={sectionData[activeIndex]?.image}
+            alt={sectionData[activeIndex]?.title}
             className="border rounded shadow-md max-w-full max-h-[80vh] transition-all duration-500"
           />
         </div>

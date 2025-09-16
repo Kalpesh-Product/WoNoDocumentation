@@ -7,6 +7,8 @@ import {
 } from "@xyflow/react";
 import dagre from "dagre";
 import SideNode from "../components/SideNode.jsx";
+import NomadFlow from "./NomadFlow.jsx";
+import { nomadListingSections, hostPanelSections, pocDetailsSections } from "../sections/hostFlow.js";
 
 const nodeTypes = { side: SideNode };
 
@@ -221,6 +223,11 @@ const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
 export default function HostPanel() {
   const [nodes, setNodes] = useState(layoutedNodes);
   const [edges, setEdges] = useState(layoutedEdges);
+  const sections = [
+    { title: "Website Builder", data: hostPanelSections },
+    { title: "Nomads Listings", data: nomadListingSections },
+    { title: "POC Details", data: pocDetailsSections },
+  ];
 
   const onNodesChange = useCallback(
     (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
@@ -236,137 +243,149 @@ export default function HostPanel() {
   );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 max-w-7xl mx-auto">
-      {/* LEFT COLUMN: Description */}
-      <div className="space-y-6 overflow-y-auto max-h-[80vh] pr-4 text-white">
-        <h2 className="text-2xl font-bold">Host Panel (Entity 3)</h2>
-
-        {/* Company Data */}
-        <div>
-          <h3 className="font-semibold underline">Company Data</h3>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>
-              On login, the host sees their <strong>company profile</strong>.
-            </li>
-            <li>
-              The profile includes <strong>services selected</strong> during
-              registration.
-            </li>
-          </ul>
-        </div>
-
-        {/* Website Builder */}
-        <div>
-          <h3 className="font-semibold underline">Website Builder</h3>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>
-              Host clicks on <strong>Website Builder</strong> and sees 3 cards:
-              Create Website, Edit Website, and Leads.
-            </li>
-            <li>
-              If <strong>website not created</strong> at signup, the
-              <strong> Create Website</strong> card is visible. Host fills in
-              the website creation form, submits, and a draft website is created
-              at
-              <code> companyName.wono.co </code>.
-            </li>
-            <li>
-              If <strong>website was created during signup</strong>, the Create
-              Website card is hidden. Host can edit website details instead.
-            </li>
-            <li>
-              The <strong>Edit Website</strong> card allows hosts to update
-              content. The form is pre-filled, and changes reflect live after
-              submission.
-            </li>
-            <li>
-              The <strong>Leads</strong> card displays enquiries captured from
-              the Nomad Website (Entity 1).
-            </li>
-          </ul>
-        </div>
-
-        {/* POC Details */}
-        <div>
-          <h3 className="font-semibold underline">POC Details</h3>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>
-              Shows existing <strong>POC details</strong> provided during
-              signup.
-            </li>
-            <li>
-              Host can add extra info such as <strong>address</strong>,{" "}
-              <strong>phone number</strong>, and{" "}
-              <strong>known languages</strong>.
-            </li>
-            <li>
-              On submission, the updated details are reflected on the{" "}
-              <strong>product page (Entity 1)</strong>.
-            </li>
-          </ul>
-        </div>
-
-        {/* Nomad Listing */}
-        <div>
-          <h3 className="font-semibold underline">Nomad Listing</h3>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>
-              Host clicks on <strong>Nomad Listing</strong> to manage
-              properties.
-            </li>
-            <li>
-              A table displays all existing listings. If no data,{" "}
-              <strong>"No data available"</strong> is shown.
-            </li>
-            <li>
-              Host can click <strong>Add Product</strong> to open a form with
-              fields from the <code>companySchema</code>.
-            </li>
-            <li>
-              On submission, the property appears both on the{" "}
-              <strong>Nomad Website (Entity 1)</strong> and{" "}
-              <strong>companyName.wono.co</strong>.
-            </li>
-          </ul>
-        </div>
-
-        {/* Services */}
-        <div>
-          <h3 className="font-semibold underline">Services</h3>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>
-              Accessible from the <strong>sidebar menu</strong>.
-            </li>
-            <li>
-              Opens a page where <strong>free services</strong> are pre-selected
-              by default.
-            </li>
-            <li>
-              Host can browse and select{" "}
-              <strong>additional modules/apps</strong>.
-            </li>
-            <li>
-              Clicking <strong>Submit</strong> sends the service request to the{" "}
-              <strong>WoNo Master Panel (Entity 2)</strong> for approval and
-              processing.
-            </li>
-          </ul>
-        </div>
+    <div className="p-6 max-w-7xl mx-auto space-y-6">
+      <div className="space-y-6">
+        {sections.map((section, idx) => (
+          <div className="space-y-6" key={idx}>
+            <h1 className="text-white text-5xl font-bold">{section.title}</h1>
+            <NomadFlow sectionData={section.data} />
+          </div>
+        ))}
       </div>
+       <h1 className="text-white text-5xl font-bold">Overall Summary</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        {/* LEFT COLUMN: Description */}
+        <div className="space-y-6 overflow-y-auto max-h-[80vh] pr-4 text-white">
+          <h2 className="text-2xl font-bold">Host Panel (Entity 3)</h2>
 
-      {/* RIGHT COLUMN: Diagram */}
-      <div className="border border-gray-400 rounded-xl flex justify-center items-center">
-        <div style={{ width: "100%", height: "80vh" }}>
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            nodeTypes={nodeTypes}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            onConnect={onConnect}
-            fitView
-            fitViewOptions={{ padding: 0.2 }}
-          />
+          {/* Company Data */}
+          <div>
+            <h3 className="font-semibold underline">Company Data</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                On login, the host sees their <strong>company profile</strong>.
+              </li>
+              <li>
+                The profile includes <strong>services selected</strong> during
+                registration.
+              </li>
+            </ul>
+          </div>
+
+          {/* Website Builder */}
+          <div>
+            <h3 className="font-semibold underline">Website Builder</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                Host clicks on <strong>Website Builder</strong> and sees 3
+                cards: Create Website, Edit Website, and Leads.
+              </li>
+              <li>
+                If <strong>website not created</strong> at signup, the
+                <strong> Create Website</strong> card is visible. Host fills in
+                the website creation form, submits, and a draft website is
+                created at
+                <code> companyName.wono.co </code>.
+              </li>
+              <li>
+                If <strong>website was created during signup</strong>, the
+                Create Website card is hidden. Host can edit website details
+                instead.
+              </li>
+              <li>
+                The <strong>Edit Website</strong> card allows hosts to update
+                content. The form is pre-filled, and changes reflect live after
+                submission.
+              </li>
+              <li>
+                The <strong>Leads</strong> card displays enquiries captured from
+                the Nomad Website (Entity 1).
+              </li>
+            </ul>
+          </div>
+
+          {/* POC Details */}
+          <div>
+            <h3 className="font-semibold underline">POC Details</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                Shows existing <strong>POC details</strong> provided during
+                signup.
+              </li>
+              <li>
+                Host can add extra info such as <strong>address</strong>,{" "}
+                <strong>phone number</strong>, and{" "}
+                <strong>known languages</strong>.
+              </li>
+              <li>
+                On submission, the updated details are reflected on the{" "}
+                <strong>product page (Entity 1)</strong>.
+              </li>
+            </ul>
+          </div>
+
+          {/* Nomad Listing */}
+          <div>
+            <h3 className="font-semibold underline">Nomad Listing</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                Host clicks on <strong>Nomad Listing</strong> to manage
+                properties.
+              </li>
+              <li>
+                A table displays all existing listings. If no data,{" "}
+                <strong>"No data available"</strong> is shown.
+              </li>
+              <li>
+                Host can click <strong>Add Product</strong> to open a form with
+                fields from the <code>companySchema</code>.
+              </li>
+              <li>
+                On submission, the property appears both on the{" "}
+                <strong>Nomad Website (Entity 1)</strong> and{" "}
+                <strong>companyName.wono.co</strong>.
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="font-semibold underline">Services</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                Accessible from the <strong>sidebar menu</strong>.
+              </li>
+              <li>
+                Opens a page where <strong>free services</strong> are
+                pre-selected by default.
+              </li>
+              <li>
+                Host can browse and select{" "}
+                <strong>additional modules/apps</strong>.
+              </li>
+              <li>
+                Clicking <strong>Submit</strong> sends the service request to
+                the <strong>WoNo Master Panel (Entity 2)</strong> for approval
+                and processing.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* RIGHT COLUMN: Diagram */}
+        <div className="border border-gray-400 rounded-xl flex justify-center items-center">
+          <div style={{ width: "100%", height: "80vh" }}>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              nodeTypes={nodeTypes}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              fitView
+              fitViewOptions={{ padding: 0.2 }}
+            />
+          </div>
         </div>
       </div>
     </div>
