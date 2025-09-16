@@ -8,7 +8,7 @@ import {
 import dagre from "dagre";
 import SideNode from "../components/SideNode.jsx";
 import NomadFlow from "./NomadFlow.jsx";
-import { nomadListingSections, hostPanelSections, pocDetailsSections } from "../sections/hostFlow.js";
+import { nomadListingSections, hostPanelSections, pocDetailsSections, servicesSections } from "../sections/hostFlow.js";
 
 const nodeTypes = { side: SideNode };
 
@@ -227,6 +227,7 @@ export default function HostPanel() {
     { title: "Website Builder", data: hostPanelSections },
     { title: "Nomads Listings", data: nomadListingSections },
     { title: "POC Details", data: pocDetailsSections },
+    { title: "Services", data: servicesSections },
   ];
 
   const onNodesChange = useCallback(

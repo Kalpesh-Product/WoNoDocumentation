@@ -131,3 +131,40 @@ export const pocDetailsSections = [
     ],
   },
 ];
+
+export const servicesSections = [
+  {
+    id: 6,
+    title: "Services",
+    image: "/assets/hosts-panel/services-1.png",
+    points: [
+      {
+        user: "Clicks on Services from the sidebar menu.",
+        system:
+          "Detects navigation event and opens the Services page, showing free services pre-selected by default.",
+      },
+      {
+        user: "Reviews the default free services that are already enabled.",
+        system:
+          "Displays a checklist/grid of services where free ones are marked as selected and locked.",
+      },
+      {
+        user: "Browses through the catalog of available services and selects additional modules/apps.",
+        system:
+          "Highlights selected modules/apps, updates UI to reflect chosen services, and prepares them for submission.",
+      },
+      {
+        user: "Clicks on the Submit button to confirm their selection.",
+        system:
+          "Validates chosen services, packages the request payload, and sends it to the WoNo Master Panel (Entity 2) for approval and processing.",
+      },
+    //   {
+    //     user: "Waits for confirmation or status update.",
+    //     system:
+    //       "Returns acknowledgment of submission (e.g., success message or pending status) and updates the Services dashboard accordingly.",
+    //   },
+    ],
+  },
+];
+
+
