@@ -42,9 +42,10 @@ const steps = [
   },
   { id: "9", label: "Company added with free services", type: "success" },
   { id: "10", label: "Email & Password generated", type: "process" },
-  { id: "11", label: "User logs into Hosts Panel (Entity 3)", type: "entity" },
+  { id: "11", label: "Email & Password is sent as email to the user", type: "process" },
+  { id: "12", label: "User logs into Hosts Panel (Entity 3)", type: "entity" },
   {
-    id: "12",
+    id: "13",
     label: "User sees company data with selected services",
     type: "success",
   },
@@ -80,6 +81,7 @@ const initialEdges = [
   { id: "e9-10", source: "9", target: "10" },
   { id: "e10-11", source: "10", target: "11" },
   { id: "e11-12", source: "11", target: "12" },
+  { id: "e12-13", source: "12", target: "13" },
 ];
 
 // ---- Dagre layout
@@ -228,11 +230,11 @@ export default function MajorFlow() {
             <li>
               The company is <strong>successfully added</strong> to the system
               and gets access to <strong>free services</strong> such as Website
-              Builder, Lead Generation, and SEO.
+              Builder, Lead Generation, and Automated Google Sheets.
             </li>
             <li>
               A secure <strong>Email & Password</strong> is generated for the
-              host to log in.
+              host to log in and sent to the user via email.
             </li>
           </ul>
         </div>

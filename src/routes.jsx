@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout/Layout.jsx";
 import WorkflowSection from "./pages/NomadFlow.jsx";
 import MajorFlow from "./pages/MajorFlow.jsx";
+import HostPanel from "./pages/HostPanel.jsx";
 
 const Home = () => {
   return (
@@ -21,6 +22,12 @@ const Home = () => {
       >
         Major Flow (B2B)
       </a>
+      <a
+        href="/host-panel"
+        className="px-6 py-3 bg-white  text-black cursor-pointer rounded hover:bg-gray-400 transition-all"
+      >
+        Host Panel
+      </a>
     </div>
   );
 };
@@ -33,6 +40,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> }, // default "/" route
       { path: "nomad", element: <WorkflowSection /> },
       { path: "major-flow", element: <MajorFlow /> },
+      { path: "host-panel", element: <HostPanel /> },
     ],
   },
 ]);
