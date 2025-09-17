@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import sections from "../sections.js";
 
-const NomadFlow = ({sectionData}) => {
+const NomadFlow = ({ sectionData }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("user"); // "user" | "system"
 
@@ -53,9 +53,7 @@ const NomadFlow = ({sectionData}) => {
             {/* Tab Content */}
             <ul className="list-disc pl-6 space-y-4">
               {section.points.map((p, i) => (
-                <li key={i}>
-                  {activeTab === "user" ? p.user : p.system}
-                </li>
+                <li key={i}>{activeTab === "user" ? p.user : p.system}</li>
               ))}
             </ul>
           </div>

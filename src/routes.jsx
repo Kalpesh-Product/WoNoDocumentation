@@ -5,6 +5,7 @@ import WorkflowSection from "./pages/NomadFlow.jsx";
 import MajorFlow from "./pages/MajorFlow.jsx";
 import HostPanel from "./pages/HostPanel.jsx";
 import sections from "./sections.js";
+import MasterPanel from "./pages/MasterPanel.jsx";
 
 const Home = () => {
   return (
@@ -29,6 +30,12 @@ const Home = () => {
       >
         Host Panel
       </a>
+      <a
+        href="/master-panel"
+        className="px-6 py-3 bg-white  text-black cursor-pointer rounded hover:bg-gray-400 transition-all"
+      >
+        Master Panel
+      </a>
     </div>
   );
 };
@@ -42,6 +49,7 @@ const router = createBrowserRouter([
       { path: "nomad", element: <WorkflowSection sectionData={sections}/> },
       { path: "major-flow", element: <MajorFlow /> },
       { path: "host-panel", element: <HostPanel /> },
+      { path: "master-panel", element: <MasterPanel /> },
     ],
   },
 ]);
