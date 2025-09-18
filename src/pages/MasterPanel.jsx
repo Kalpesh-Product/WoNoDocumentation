@@ -1,10 +1,14 @@
 import React from "react";
 import NomadFlow from "./NomadFlow";
 import {
+  dataUploadSections,
+  inactiveWebsitesSections,
+  leadsSections,
   masterLoginFlow,
   masterNomadLisitngs,
   masterWebsiteFlow,
   pocDetailsSections,
+  profileSections,
   servicesSections,
 } from "../sections/masterFlow";
 
@@ -15,6 +19,10 @@ const MasterPanel = () => {
     { id: "nomads", title: "Nomads Listings", data: masterNomadLisitngs },
     { id: "poc", title: "POC Details", data: pocDetailsSections },
     { id: "services", title: "Service Requests", data: servicesSections },
+    { id: "leads", title: "All Leads", data: leadsSections },
+    { id: "inactiveWebsites", title: "Inactive Websites", data: inactiveWebsitesSections },
+    { id: "dataUpload", title: "Data Upload", data: dataUploadSections },
+    { id: "profile", title: "Profile", data: profileSections },
   ];
 
   return (

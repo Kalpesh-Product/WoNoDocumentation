@@ -16,13 +16,13 @@ const NomadFlow = ({ sectionData }) => {
     <div className="p-6 bg-transparent text-white mx-auto border-[1px] border-dashed border-gray-700 border-t-0 max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* Left column → scrollable text with snap */}
       <div
-        className="h-screen overflow-y-scroll snap-y snap-mandatory pr-4"
+        className="h-[70vh] overflow-y-scroll snap-y snap-mandatory pr-4"
         onScroll={handleScroll}
       >
         {sectionData.map((section) => (
           <div
             key={section.id}
-            className="h-screen snap-start flex flex-col justify-center space-y-6"
+            className="h-[70vh] snap-start flex flex-col justify-start space-y-6"
           >
             <h2 className="text-2xl font-bold">{section.title}</h2>
 
@@ -61,7 +61,7 @@ const NomadFlow = ({ sectionData }) => {
       </div>
 
       {/* Right column → sticky image that changes */}
-      <div className="hidden md:flex justify-center items-center">
+      <div className="hidden md:flex justify-center items-start">
         <div className="sticky top-20">
           <img
             src={sectionData[activeIndex]?.image}
