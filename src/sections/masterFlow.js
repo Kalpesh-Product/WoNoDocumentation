@@ -288,7 +288,7 @@ export const leadsSections = [
   {
     id: 9,
     title: "All POC Contact",
-    image: "/assets/master-panel/master-all-poc-contact.png",
+    image: "/assets/master-panel/master-poc-contact.png",
     points: [
       {
         user: "Clicks on the 'All POC Contact' tab inside the All Leads menu.",
