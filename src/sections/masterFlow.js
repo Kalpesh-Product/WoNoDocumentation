@@ -482,7 +482,7 @@ export const dataUploadSections = [
       },
     ],
   },
-    {
+  {
     id: 15,
     title: "Product Image Upload",
     image: "/assets/master-panel/master-product-image-upload.png",
@@ -554,7 +554,7 @@ export const profileSections = [
       },
     ],
   },
-    {
+  {
     id: 17,
     title: "Change Password",
     image: "/assets/master-panel/master-change-password.png",
@@ -588,4 +588,284 @@ export const profileSections = [
   },
 ];
 
+//-----------------------Descriptive section-----------------------//
 
+export const salesSections = [
+  {
+    id: 18,
+    title: "Sales Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Sales Dashboard serves as the central view when users access the Sales Module. It provides multiple interactive graph widgets that deliver real-time insights into departmental performance. These widgets cover a wide range of areas, including revenue trends, average revenue per client, lead conversion metrics, occupancy utilization, and client-related data. The dashboard is designed for quick analysis and decision-making, offering a comprehensive overview of the Sales Department at a glance.",
+      },
+      {
+        heading: "Sales Department Revenues",
+        description:
+          "This section highlights department revenue trends over time. Data is presented in monthly, quarterly, and annual breakdowns to help employees and managers track growth, identify high-performing periods, and make informed financial decisions.",
+      },
+      {
+        heading: "Average Revenue",
+        description:
+          "The Average Revenue widget summarizes profitability by presenting revenue per client, product, or deal. It allows employees to quickly assess sales efficiency and identify which client segments or offerings contribute most to overall revenue.",
+      },
+      {
+        heading: "Leads Data",
+        description:
+          "The Leads Data widget focuses on lead generation and conversion metrics. It breaks down leads by source, shows their progress through different stages of the sales funnel, and highlights conversion success rates to guide sales strategies.",
+      },
+      {
+        heading: "Occupancy Widgets Collection",
+        description:
+          "A collection of widgets that provide insights into occupancy and resource usage. These widgets include seat occupancy rates, department-wide utilization statistics, and availability trends. By combining these metrics, the Sales Department can measure operational efficiency and evaluate the impact of occupancy on sales outcomes.",
+      },
+      {
+        heading: "Client Data Widgets Collection",
+        description:
+          "A comprehensive set of widgets that summarize client information. These include company profiles, active projects, revenue contribution per client, and overall engagement levels. Together, they provide a complete 360-degree view of client relationships and their business value.",
+      },
+      {
+        heading: "Client Member Data Widgets Collection",
+        description:
+          "Widgets dedicated to individuals associated with client organizations. This includes primary points of contact, their roles and responsibilities, engagement activity, and communication history. These insights help employees manage client relationships more effectively and build stronger connections.",
+      },
+      {
+        heading: "Turnover",
+        description:
+          "The Turnover section provides detailed breakdowns of sales turnover, comparing year-over-year performance and highlighting significant patterns. It helps the department evaluate financial stability and long-term sustainability.",
+      },
+      {
+        heading: "Finance (Department Budget)",
+        description:
+          "The Finance section is dedicated to managing the Sales Department’s budget. It includes budget allocation, actual spending, and forecasting tools, all displayed in structured tables and graphs. This ensures financial discipline while supporting growth.",
+      },
+      {
+        heading: "Mix Bag",
+        description:
+          "The Mix Bag section lists additional tools and features designed to support sales operations. These include value-added utilities that may not fall under core financial or client-related activities but enhance overall productivity and flexibility.",
+      },
+      {
+        heading: "Data",
+        description:
+          "The Data section provides access to critical business datasets. Employees can view and manage Asset Data, Invoice Data, and Vendor records. Each dataset is displayed in structured, searchable, and filterable tables for efficient management.",
+      },
+      {
+        heading: "Settings",
+        description:
+          "The Settings section allows employees to configure and manage departmental policies. It includes features such as uploading or updating Standard Operating Procedures (SOPs), bulk uploading of documents, and reviewing department-specific policies.",
+      },
+    ],
+  },
+];
+export const financeSections = [
+  {
+    id: 19,
+    title: "Finance Module",
+    content: [
+      {
+        heading: "Finance Dashboard",
+        description:
+          "The Finance Dashboard serves as the central overview when accessing the Finance Module. It provides multiple graph-based widgets displaying critical financial insights. These include income versus expense comparisons, payment and payout trends, as well as collection tracking. The dashboard is designed to give the Finance Department a quick yet comprehensive understanding of the organization’s financial health at a glance.",
+      },
+      {
+        heading: "Cashflow",
+        description:
+          "The Cashflow section focuses on managing and analyzing the movement of funds across the organization. It includes multiple tabs for deeper analysis.\n\n" +
+          "**Projections** Displays financial projections year-wise, helping the department plan future revenues, expenses, and resource allocations.\n" +
+          "**Historical P&L** Presents historical Profit and Loss statements derived from income and expense data stored in the system. This allows financial managers to evaluate past performance and identify trends.",
+      },
+      {
+        heading: "Finance (Department Budget)",
+        description:
+          "The Department Budget section provides full visibility and control over departmental financial planning.\n\n" +
+          "**Budget** Displays year-wise departmental budgets, ensuring transparency and financial accountability.\n" +
+          "**Department Wise Budget** Allows the Finance Department to review and analyze budgets from all other departments within the company.\n" +
+          "**Voucher** Provides a voucher request form where departments can request allocation of funds for specific needs.\n" +
+          "**Payment Schedule** Lists all upcoming payments in a calendar view, helping financial teams stay on top of due dates.\n" +
+          "**Statutory Payments** Shows all compliance-related statutory payments in a structured table format.\n" +
+          "**Landlord Payments** Displays landlord-related payments organized by location, ensuring property-related expenses are properly tracked.",
+      },
+      {
+        heading: "Billing",
+        description:
+          "The Billing section manages invoices and payment approvals across clients and departments.\n\n" +
+          "**Client Invoice** Displays all client invoices raised by the company, providing detailed payment and status tracking.\n" +
+          "**Department Invoice** Shows invoices generated for different departments for their budget-related expenditures.\n" +
+          "**Pending Approvals** Lists all pending budget requests from departments, with options to approve or reject after review.\n" +
+          "**Voucher History** Maintains a complete record of vouchers submitted, whether from the Finance Department or other departments.",
+      },
+      {
+        heading: "Mix Bag",
+        description:
+          "The Mix Bag section serves as a repository of critical documents related to company leadership and management. Employees can access key documents and also upload new ones, ensuring that all essential files are securely stored and easily retrievable within the Finance Module.",
+      },
+      {
+        heading: "Data",
+        description:
+          "The Data section provides access to critical business datasets. Employees can view and manage Asset Data, Invoice Data, and Vendor records. Each dataset is displayed in structured, searchable, and filterable tables for efficient management.",
+      },
+      {
+        heading: "Settings",
+        description:
+          "The Settings section allows employees to configure and manage departmental policies. It includes features such as uploading or updating Standard Operating Procedures (SOPs), bulk uploading of documents, and reviewing department-specific policies.",
+      },
+    ],
+  },
+];
+
+export const adminSections = [
+  {
+    id: 20,
+    title: "Admin Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Admin Dashboard provides a financial year–wise view of department expenses. It also includes multiple data widgets that help monitor operations and resources.\n\n" +
+          "**Offices Data**  Shows occupied and free office space details once navigated into inside pages.\n" +
+          "**Monthly Tasks Data**  Displays the list of monthly tasks assigned within the department.\n" +
+          "**Expense per Sqft**  Provides insights into expenses incurred per square foot of space usage.\n" +
+          "**Electricity Expense**  Highlights electricity-related expenses as part of departmental costs.\n" +
+          "**Executive Details**  Summarizes executive-level staff details including role and responsibilities.\n" +
+          "**Shift Details**  Displays employee shift allocations and schedules.\n" +
+          "**Client Member Birthdays**  Highlights upcoming birthdays of client members for relationship management.\n" +
+          "**Client Anniversaries**  Displays client company anniversaries to support client engagement activities.\n" +
+          "**Housekeeping Data**  Provides operational data related to housekeeping resources and allocation.",
+      },
+      {
+        heading: "Annual Expenses",
+        description:
+          "The Annual Expenses section presents the financial year–wise budget data of the Admin Department, helping managers track overall resource utilization and cost efficiency.",
+      },
+      {
+        heading: "Inventory",
+        description:
+          "The Inventory section maintains a tabular view of all items managed by the Admin Department. It allows department heads to add new items or edit existing entries, ensuring inventory is always updated and accurate.",
+      },
+      {
+        heading: "Finance (Department Budget)",
+        description:
+          "The Department Budget section provides full visibility and control over departmental financial planning.\n\n" +
+          "**Budget** Displays year-wise departmental budgets, ensuring transparency and financial accountability.\n" +
+          "**Voucher** Provides a voucher request form where departments can request allocation of funds for specific needs.\n" +
+          "**Payment Schedule** Lists all upcoming payments in a calendar view, helping financial teams stay on top of due dates.\n",
+      },
+      {
+        heading: "Data",
+        description:
+          "The Data section filters electricity-related consumption from the overall departmental budget. It highlights electricity expenses separately, making it easier to monitor and analyze energy costs." +
+          "The Data section provides access to critical business datasets. Employees can view and manage Asset Data, Invoice Data, and Vendor records. Each dataset is displayed in structured, searchable, and filterable tables for efficient management.",
+      },
+      {
+        heading: "Mix Bag",
+        description:
+          "The Mix Bag section contains a set of tools that assist the Admin Department in managing personnel and events.\n\n" +
+          "**Team Members Schedule**  Enables the Admin Head to assign, unassign, or substitute shifts for team members by selecting the desired unit.\n" +
+          "**Housekeeping Members**  Allows the Admin Head to assign, unassign, or substitute shifts for housekeeping staff across different units.\n" +
+          "**Holidays & Events**  Currently unavailable, reserved for future enhancements.\n" +
+          "**Client Member Onboarding**  Allows the Admin Head to onboard client members into the system with minimum required details, including associated biometric data for secure authentication.",
+      },
+    ],
+  },
+];
+
+export const itSections = [
+  {
+    id: 21,
+    title: "IT Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The IT Dashboard provides a financial year–wise overview of departmental expenses. It also includes operational widgets that help monitor IT resources, performance, and utilization.\n\n" +
+          "**Offices Data** Shows occupied and free office space details once navigated into inside pages.\n" +
+          "**Monthly Tasks Data** Displays a list of monthly IT-related tasks for monitoring progress and accountability.\n" +
+          "**Expense per Sqft** Provides insights into IT-related costs incurred per square foot of office usage.\n" +
+          "**Internet Expense** Highlights internet-related expenses within the department’s budget.\n" +
+          "**Monthly KPA** Summarizes key performance areas (KPAs) tracked monthly to measure IT team efficiency and delivery.\n" +
+          "**Shift Details** Displays employee shift allocations and working schedules within the IT Department.",
+      },
+      {
+        heading: "Annual Expenses",
+        description:
+          "The Annual Expenses section presents the financial year–wise budget data of the IT Department. This view enables department managers to monitor cost distribution, identify spending patterns, and ensure financial accountability.",
+      },
+      {
+        heading: "Inventory",
+        description:
+          "The Inventory section provides a tabular overview of all IT-related assets and items. Department heads can add new inventory records or edit existing entries, ensuring all IT hardware, software licenses, and resources are accurately tracked.",
+      },
+      {
+        heading: "Finance (Department Budget)",
+        description:
+          "The Department Budget section provides full visibility and control over departmental financial planning.\n\n" +
+          "**Budget** Displays year-wise departmental budgets, ensuring transparency and financial accountability.\n" +
+          "**Voucher** Provides a voucher request form where departments can request allocation of funds for specific needs.\n" +
+          "**Payment Schedule** Lists all upcoming payments in a calendar view, helping financial teams stay on top of due dates.\n",
+      },
+      {
+        heading: "Data",
+        description:
+          "The Data section isolates internet-related expenses from the overall departmental budget. This view highlights internet consumption and costs separately, helping managers track network usage and optimize related spending." +
+          "The Data section provides access to critical business datasets. Employees can view and manage Asset Data, Invoice Data, and Vendor records. Each dataset is displayed in structured, searchable, and filterable tables for efficient management.",
+      },
+      {
+        heading: "Mix Bag",
+        description:
+          "The Mix Bag section provides operational tools for managing IT personnel and schedules.\n\n" +
+          "**Team Members Schedule**  Enables the IT Head to assign, unassign, or substitute shifts for IT team members by selecting the desired unit. This ensures proper coverage of IT services across all departments and operational units.",
+      },
+    ],
+  },
+];
+
+export const maintenanceSections = [
+  {
+    id: 22,
+    title: "Maintenance Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Maintenance Dashboard provides a financial year–wise overview of departmental expenses. It includes several widgets that track operational efficiency, resource usage, and performance.\n\n" +
+          "**Offices Data**  Shows occupied and free office space details once navigated into inside pages.\n" +
+          "**Monthly Tasks Data**  Displays a list of monthly tasks and their completion status, ensuring accountability.\n" +
+          "**Expense per Sqft**  Provides insights into maintenance-related costs incurred per square foot of usage.\n" +
+          "**Assets Under Management**  Highlights assets currently under the department’s management, including their status and upkeep records.\n" +
+          "**Monthly KPA**  Summarizes key performance areas (KPAs) tracked monthly to measure the effectiveness of the maintenance team.\n" +
+          "**Shift Details**  Displays employee shift allocations and scheduling within the Maintenance Department.",
+      },
+      {
+        heading: "Annual Expenses",
+        description:
+          "The Annual Expenses section shows the financial year–wise budget data of the Maintenance Department. This helps department heads evaluate total expenditure, track trends, and align budgets with operational needs.",
+      },
+      {
+        heading: "Inventory",
+        description:
+          "The Inventory section provides a structured table of all maintenance-related items and equipment. Department managers can add new entries or edit existing records, ensuring updated and accurate inventory tracking.",
+      },
+      {
+        heading: "Finance (Department Budget)",
+        description:
+          "The Department Budget section provides full visibility and control over departmental financial planning.\n\n" +
+          "**Budget** Displays year-wise departmental budgets, ensuring transparency and financial accountability.\n" +
+          "**Voucher** Provides a voucher request form where departments can request allocation of funds for specific needs.\n" +
+          "**Payment Schedule** Lists all upcoming payments in a calendar view, helping financial teams stay on top of due dates.\n",
+      },
+      {
+        heading: "Data",
+        description:
+          "The Data section provides visibility into **AMC Records**  comprehensive details of Annual Maintenance Contracts (AMC) for equipment and services. This helps in monitoring compliance, renewal dates, and cost tracking." +
+          "This section provides access to critical business datasets. Employees can view and manage Asset Data, Invoice Data, and Vendor records. Each dataset is displayed in structured, searchable, and filterable tables for efficient management.",
+      },
+      {
+        heading: "Mix Bag",
+        description:
+          "The Mix Bag section includes operational tools for staff scheduling and management.\n\n" +
+          "**Team Members Schedule**  Enables the Maintenance Head to assign, unassign, or substitute shifts for maintenance team members by selecting the desired unit. This ensures consistent coverage and uninterrupted service across facilities.",
+      },
+    ],
+  },
+];
