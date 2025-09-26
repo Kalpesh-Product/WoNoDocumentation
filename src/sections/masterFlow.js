@@ -589,6 +589,31 @@ export const profileSections = [
 ];
 
 //-----------------------Descriptive section-----------------------//
+export const frontendSections = [
+  {
+    id: 28,
+    title: "Frontend Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Frontend Dashboard displays the available menus within the Tech Department. These options allow companies to manage their digital presence and related details.\n\n" +
+          "**Website Builder**  A static website builder that enables companies to create and host their own websites.\n" +
+          "**Nomad Listings**  Provides functionality to list products that will be showcased on the Nomads website.\n" +
+          "**POC Details**  Displays the company’s Point of Contact (POC) information, which is the data provided during the signup process on wono.co.",
+      },
+      {
+        heading: "Website Builder",
+        description:
+          "The Website Builder allows companies to create and manage their hosted websites.\n\n" +
+          "**Create Website**  Allows a company to fill out a form with all required details to generate the hosted website. This option is available only if the company has not already hosted a website. Once submitted, the company website is hosted on a subdomain of wono.co (e.g., companyName.wono.co).\n" +
+          "**Edit Website**  Provides a form pre-filled with existing website data. Users can modify content, and upon submission, changes are immediately reflected on the hosted site.\n" +
+          "**Leads**  Displays all leads generated from the hosted website. Any visitor who submits a form on the company’s hosted website will appear here, providing lead data for follow-up.",
+      },
+    ],
+  },
+];
+
 
 export const salesSections = [
   {
@@ -766,6 +791,11 @@ export const adminSections = [
           "**Holidays & Events**  Currently unavailable, reserved for future enhancements.\n" +
           "**Client Member Onboarding**  Allows the Admin Head to onboard client members into the system with minimum required details, including associated biometric data for secure authentication.",
       },
+      {
+        heading: "Settings",
+        description:
+          "The Settings section allows employees to configure and manage departmental policies. It includes features such as uploading or updating Standard Operating Procedures (SOPs), bulk uploading of documents, and reviewing department-specific policies.",
+      },
     ],
   },
 ];
@@ -815,6 +845,11 @@ export const itSections = [
         description:
           "The Mix Bag section provides operational tools for managing IT personnel and schedules.\n\n" +
           "**Team Members Schedule**  Enables the IT Head to assign, unassign, or substitute shifts for IT team members by selecting the desired unit. This ensures proper coverage of IT services across all departments and operational units.",
+      },
+      {
+        heading: "Settings",
+        description:
+          "The Settings section allows employees to configure and manage departmental policies. It includes features such as uploading or updating Standard Operating Procedures (SOPs), bulk uploading of documents, and reviewing department-specific policies.",
       },
     ],
   },
@@ -866,6 +901,291 @@ export const maintenanceSections = [
           "The Mix Bag section includes operational tools for staff scheduling and management.\n\n" +
           "**Team Members Schedule**  Enables the Maintenance Head to assign, unassign, or substitute shifts for maintenance team members by selecting the desired unit. This ensures consistent coverage and uninterrupted service across facilities.",
       },
+      {
+        heading: "Settings",
+        description:
+          "The Settings section allows employees to configure and manage departmental policies. It includes features such as uploading or updating Standard Operating Procedures (SOPs), bulk uploading of documents, and reviewing department-specific policies.",
+      },
     ],
   },
 ];
+
+export const hrSections = [
+  {
+    id: 23,
+    title: "HR Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The HR Dashboard provides a financial year–wise view of departmental expenses and acts as the central hub for managing employees and company-level details. It contains two main sections: Employee and Company.\n\n",
+      },
+      {
+        heading: "Employee",
+        description:
+          "Employee  Displays all employee-related data organized in tabs:\n" +
+          "**Employee List**  Shows the complete employee directory with department and role details. Selecting an employee reveals additional data such as editable employee details, employee-specific attendance, leaves, agreements, and payslip history.\n" +
+          "**Past Employees**  Lists all inactive employees who have exited the company.\n" +
+          "**Attendance**  Tracks daily attendance for all employees in hours. Users can switch between monthly and financial year views.\n" +
+          "**Leaves**  Displays leave data for employees, showing presence/absence. Data can be filtered by month and financial year.\n" +
+          "**Employee Onboarding**  Provides a form to onboard new employees with all necessary details.\n\n",
+      },
+      {
+        heading: "Company",
+        description:
+          "**Company** - Displays company-specific data in multiple tabs:\n" +
+          "    **Company Logo**  Allows the HR team to update the company logo.\n" +
+          "    **Company Handbook**  Contains a description of the company, organizational chart, and company-wide SOPs and policies, including department-specific SOPs and policies.\n" +
+          "    **Departments**  Shows a table listing all departments with managers and their active status.\n" +
+          "    **Work Locations**  Displays all company work locations (buildings). HR can add new locations via a form.\n" +
+          "    **Holidays**  Lists all company holidays. HR can add ad-hoc holidays via the Add Holiday form.\n" +
+          "    **Events**  Displays all company events in a table, with an option to add new events.\n" +
+          "    **Company Policies**  Shows all company policies in a table, with the ability to add new ones.\n" +
+          "    **Company SOPs**  Lists all SOPs with the ability to add new ones.\n" +
+          "    **Employee Type**  Shows categories of employment (Intern, Full Time, Part Time, etc.), with the ability to add new types.\n" +
+          "    **Shifts**  Displays available shifts (General Shift, Load Shift, etc.) with an option to add new shifts.\n" +
+          "    **Templates**  Contains document templates that HR can download or add for company use.",
+      },
+      {
+        heading: "Finance (Department Budget)",
+        description:
+          "**Payroll**  Provides tools for managing employee payroll. HR can bulk-generate payslips for multiple employees or generate them individually by selecting an employee and reviewing all necessary details.\n" +
+          "**Budget** Displays year-wise departmental budgets, ensuring transparency and financial accountability.\n" +
+          "**Voucher** Provides a voucher request form where departments can request allocation of funds for specific needs.\n" +
+          "**Payment Schedule** Lists all upcoming payments in a calendar view, helping financial teams stay on top of due dates.\n",
+      },
+      {
+        heading: "Mix Bag",
+        description:
+          "The Mix Bag section includes additional HR functionalities:\n\n" +
+          "**Attendance Requests**  Displays all attendance correction requests submitted by employees, with options to approve or reject.\n" +
+          "**Leave Requests**  Lists all employee leave requests for HR to review, approve, or reject.",
+      },
+      {
+        heading: "Data",
+        description:
+          "The Data section contains HR-related datasets for reporting and analysis:\n\n" +
+          "**Job Application List**  Displays all job applications received by the company.\n" +
+          "**Payroll Reports**  Shows payroll reports for all employees, providing financial insights and tracking.\n" +
+          "This section provides access to critical business datasets. Employees can view and manage Asset Data, Invoice Data, and Vendor records. Each dataset is displayed in structured, searchable, and filterable tables for efficient management.",
+      },
+      {
+        heading: "Settings",
+        description:
+          "The Settings section allows employees to configure and manage departmental policies. It includes features such as uploading or updating Standard Operating Procedures (SOPs), bulk uploading of documents, and reviewing department-specific policies.",
+      },
+    ],
+  },
+];
+
+// --------------- Apps in descrptive --------------------------//
+
+export const meetingSections = [
+  {
+    id: 24,
+    title: "Meeting Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Meeting Dashboard provides a comprehensive overview of meeting-related insights to help monitor room usage, booking activity, and overall efficiency.\n\n" +
+          "**Average Meeting Room Utilization**  Shows the percentage of average utilization of all meeting rooms, helping assess how effectively resources are being used.\n" +
+          "**Unique Bookings**  Displays the number of unique meetings booked, ensuring visibility of usage patterns.\n" +
+          "**Total Hours Booked**  Summarizes the total hours for which meeting rooms have been reserved.\n" +
+          "**Guest Bookings**  Highlights the number of meetings booked that include external participants or guests.\n" +
+          "**Cancelled Hours**  Shows the number of meeting hours cancelled, giving insights into cancellation trends.\n" +
+          "**Ongoing Meetings**  Displays details of meetings that are currently in progress.\n" +
+          "**Monthwise Occupancy Details**  Presents occupancy metrics for meeting rooms on a monthly basis, useful for long-term analysis.\n" +
+          "**Room Availability**  Indicates which meeting rooms are currently available for booking.\n" +
+          "**Hygiene Status**  Provides hygiene and cleanliness status of meeting rooms, ensuring readiness for usage.",
+      },
+      {
+        heading: "Book a Meeting",
+        description:
+          "The Book a Meeting feature allows users to schedule a meeting by selecting a location and unit, choosing the desired time slots, and filling in additional details such as participants and agenda. Once submitted, the system reserves the room and logs the meeting in the dashboard and calendar.",
+      },
+      {
+        heading: "Manage Meetings",
+        description:
+          "The Manage Meetings section enables admin employees or department heads to oversee both internal and external meetings.\n\n" +
+          "**Monitor Meetings**  Track ongoing internal and external meetings in real time.\n" +
+          "**Change Meeting Status & Housekeeping Status**  Update the status of meetings and mark housekeeping requirements for room readiness.\n" +
+          "**Cancel Meetings**  Provides the option to cancel meetings if necessary, ensuring scheduling conflicts are resolved efficiently.",
+      },
+      {
+        heading: "Calendar (Meetings Only)",
+        description:
+          "The Calendar view provides admin department employees with a complete schedule of all booked meetings. It allows quick navigation across dates, helping to visualize room utilization and availability in a calendar format.",
+      },
+      {
+        heading: "Reports (Meetings Only)",
+        description:
+          "The Reports section enables admin employees to view detailed reports of all meetings conducted. Reports can be filtered by date, room, or other criteria and exported to CSV format for further analysis or record-keeping.",
+      },
+      {
+        heading: "Reviews",
+        description:
+          "The Reviews section provides visibility into feedback received from employees and guests regarding meetings or meeting rooms.\n\n" +
+          "**View Reviews**  Admin employees can see all reviews submitted for meetings and services.\n" +
+          "**Reply to Reviews**  Employees can respond to feedback when necessary to improve service quality and maintain engagement.",
+      },
+      {
+        heading: "Settings",
+        description:
+          "The Settings section allows the Admin Head to view all available meeting rooms within the system. New rooms can also be added by filling out a form with details such as room capacity, location, and available amenities.",
+      },
+    ],
+  },
+];
+
+export const visitorsSections = [
+  {
+    id: 25,
+    title: "Visitors Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Visitors Dashboard provides an overview of visitor activity and insights into trends related to company and client interactions.\n\n" +
+          "**Monthly Total Visitors**  Shows the total number of visitors recorded each month, giving insights into traffic volume.\n" +
+          "**Visitor Check-in**  Tracks visitors as they check in, displaying real-time data for arrivals.\n" +
+          "**Checkout**  Displays details of visitors who have completed their visits and checked out.\n" +
+          "**Types of Visits**  Categorizes visits into internal and external, providing a breakdown of the purpose of each visit.\n" +
+          "**Visitor Categories**  Segments visitors into different categories (such as clients, vendors, partners, or guests) to analyze visitor demographics.",
+      },
+      {
+        heading: "Add Visitor",
+        description:
+          "Admin employees can register a new visitor by filling out a form with relevant details. A visitor can be:\n\n" +
+          "**Internal Visitor**  Visiting someone within the same company.\n" +
+          "**External Visitor**  Visiting someone from client companies.",
+      },
+      {
+        heading: "Add Client",
+        description:
+          "Admin employees can register a client in the system. Adding a client here refers to an external meeting client, which is directly linked to the Meeting Module.\n\n" +
+          "Once added, the client’s name becomes available in the dropdown list when booking an external meeting, ensuring smooth integration between visitor management and meeting scheduling.",
+      },
+      {
+        heading: "Manage Visitors",
+        description:
+          "The Manage Visitors section allows Admin employees or Department Heads to oversee all visitor activity.\n\n" +
+          "**Monitor Visitors**  Track both internal and external visitors in real time.\n" +
+          "**Change Visitor Status**  Update visitor status such as checked-in or checked-out to maintain accurate records.",
+      },
+      {
+        heading: "Team Members",
+        description:
+          "The Team Members section displays details of all employees managing the Visitor Module. It provides clarity on responsibilities and roles within the department.",
+      },
+      {
+        heading: "Reports",
+        description:
+          "The Reports section provides detailed visitor reports that include visit history, categories, and activity logs.\n\n" +
+          "Admin employees can also export this data into CSV format for record-keeping, analysis, or compliance purposes.",
+      },
+    ],
+  },
+];
+
+export const tasksSections = [
+  {
+    id: 26,
+    title: "Tasks Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Tasks Dashboard provides insights into task completion trends and meeting-specific tasks for users.\n\n" +
+          "**Overall Average Tasks Completion**  Displays the average rate of tasks completed across the department, offering insights into team productivity.\n" +
+          "**Overall Pending vs Completed Tasks**  Shows a comparative view of pending and completed tasks, helping track progress and workload balance.\n" +
+          "**Meetings (User Specific)**  Displays tasks related to specific meetings for each user, ensuring individual accountability.",
+      },
+      {
+        heading: "My Tasks",
+        description:
+          "The My Tasks section allows users to create and manage their personal tasks. These tasks are private and not visible to department admins.\n\n" +
+          "Users can:\n" +
+          "**Add Tasks**  Create new personal tasks to track individual responsibilities.\n" +
+          "**Manage Tasks**  Monitor ongoing tasks and mark them as complete when finished.\n\n" +
+          "This feature ensures that users have a dedicated space to manage their own workload independently of departmental activities.",
+      },
+      {
+        heading: "Department Tasks",
+        description:
+          "The Department Tasks section focuses on collaborative work managed by the department admin.\n\n" +
+          "**Task Creation**  Department admins can create and assign department-level tasks.\n" +
+          "**Assignment**  Team members are assigned tasks (often communicated verbally by the admin).\n" +
+          "**Completion**  Once completed, members mark the task as finished, and it appears in the completed section with the responsible member’s name.\n\n" +
+          "This section ensures accountability and visibility for department-wide responsibilities.",
+      },
+      {
+        heading: "Team Members",
+        description:
+          "The Team Members section provides details of all employees associated with the Tasks Module. It ensures clarity on team roles and helps in tracking assigned tasks.",
+      },
+      {
+        heading: "Reports",
+        description:
+          "The Reports section consolidates task-related data for analysis and export.\n\n" +
+          "**My Tasks Reports**  Displays reports for personally created tasks, with the option to export to CSV for record-keeping.\n" +
+          "**Assigned Tasks Reports**  Shows tasks assigned by top management to the department, providing visibility into organizational priorities.",
+      },
+    ],
+  },
+];
+
+export const ticketsSections = [
+  {
+    id: 27,
+    title: "Tickets Module",
+    content: [
+      {
+        heading: "Dashboard",
+        description:
+          "The Tickets Dashboard provides insights into ticket activity and department-level performance.\n\n" +
+          "**Overall Department Raised Tickets**  Displays the number of tickets raised across the department, helping track workload and request frequency.\n" +
+          "**Total Tickets**  Shows the cumulative number of tickets handled by the system, including raised, open, and closed tickets.\n" +
+          "**Department Tickets**  Breaks down ticket data department-wise, highlighting which departments raise and resolve the most tickets.\n" +
+          "**Types of Tickets**  Categorizes tickets by issue type (e.g., technical, administrative, operational), providing clarity into recurring problems.",
+      },
+      {
+        heading: "Raise Ticket",
+        description:
+          "The Raise Ticket feature allows users to log an issue or request to a specific department by filling out a form. Users can also attach supporting files, such as screenshots or images, to provide additional context.\n\n" +
+          "All raised tickets are automatically displayed in a table below the form for easy tracking, ensuring users have visibility into their submissions.",
+      },
+      {
+        heading: "Manage Tickets",
+        description:
+          "The Manage Tickets section gives a complete overview of ticket statuses, enabling department admins and members to track and process requests efficiently.\n\n" +
+          "**Received Tickets**  Displays all tickets received by the department. From here, the department head can assign tickets to team members, or members can self-assign.\n" +
+          "**Accepted Tickets**  Shows tickets that have been accepted by a team member. Tickets can be closed once resolved, or pushed back to 'Open' if further support is needed. Admins also have the option to escalate tickets to another department if the issue is irrelevant to their own.\n" +
+          "**Support Tickets**  Contains tickets that were pushed for support. The admin can reassign these tickets to another member or take them up directly.\n" +
+          "**Escalated Tickets**  Shows tickets escalated from other departments, ensuring that cross-department issues are addressed properly.\n" +
+          "**Closed Tickets**  Displays all tickets closed by the team, providing a record of resolved issues.",
+      },
+      {
+        heading: "Reports",
+        description:
+          "The Reports section lists all tickets raised and closed within the user’s department. Reports can be filtered, analyzed, and exported to CSV format for compliance, auditing, or performance evaluation purposes.",
+      },
+      {
+        heading: "Team Members",
+        description:
+          "The Team Members section provides details of all employees working within the Tickets Module. This helps in understanding roles, responsibilities, and ticket assignment distribution.",
+      },
+      {
+        heading: "Ticket Settings",
+        description:
+          "The Ticket Settings section helps reduce clutter caused by duplicate or misclassified issues.\n\n" +
+          "**Unmapped Issues**  Tickets raised with issues marked as 'Other' appear here. Department admins can map these tickets to existing issue categories if they are found to be duplicates or closely related to already listed problems.\n\n" +
+          "This ensures standardized issue classification and avoids the creation of redundant categories.",
+      },
+    ],
+  },
+];
+
+
+
+

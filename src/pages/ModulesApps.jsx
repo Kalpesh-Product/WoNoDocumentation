@@ -4,16 +4,22 @@ import {
   adminSections,
   dataUploadSections,
   financeSections,
+  frontendSections,
+  hrSections,
   inactiveWebsitesSections,
   itSections,
   leadsSections,
   masterLoginFlow,
   masterNomadLisitngs,
   masterWebsiteFlow,
+  meetingSections,
   pocDetailsSections,
   profileSections,
   salesSections,
   servicesSections,
+  tasksSections,
+  ticketsSections,
+  visitorsSections,
 } from "../sections/masterFlow";
 import SalesModuleFlow from "../components/ModuleFlow";
 
@@ -24,10 +30,12 @@ const ModulesApps = () => {
     { id: "admin", title: "Admin", data: adminSections },
     { id: "it", title: "IT", data: itSections },
     { id: "maintenance", title: "Maintenance", data: itSections },
-    { id: "hr", title: "HR", data: [] },
-    { id: "meetings", title: "Meetings", data: [] },
-    { id: "visitors", title: "Visitors", data: [] },
-    { id: "tasks", title: "Tasks", data: [] },
+    { id: "hr", title: "HR", data: hrSections },
+    { id: "frontend", title: "Frontend", data: frontendSections },
+    { id: "meetings", title: "Meetings", data: meetingSections },
+    { id: "visitors", title: "Visitors", data: visitorsSections },
+    { id: "tasks", title: "Tasks", data: tasksSections },
+    { id: "tickets", title: "Tickets", data: ticketsSections },
   ];
 
   return (
