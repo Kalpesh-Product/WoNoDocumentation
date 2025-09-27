@@ -13,6 +13,7 @@ import {
   masterNomadLisitngs,
   masterWebsiteFlow,
   meetingSections,
+  performanceSections,
   pocDetailsSections,
   profileSections,
   salesSections,
@@ -36,6 +37,7 @@ const ModulesApps = () => {
     { id: "visitors", title: "Visitors", data: visitorsSections },
     { id: "tasks", title: "Tasks", data: tasksSections },
     { id: "tickets", title: "Tickets", data: ticketsSections },
+    { id: "performance", title: "Performance", data: performanceSections },
   ];
 
   return (

@@ -1186,6 +1186,39 @@ export const ticketsSections = [
   },
 ];
 
+export const performanceSections = [
+  {
+    id: 29,
+    title: "Performance Module",
+    content: [
+      {
+        heading: "Department Overview",
+        description:
+          "When a user is part of multiple departments or belongs to top management, the Performance Module initially displays a consolidated table. This table lists all the departments along with their **Daily KRA** (Key Result Areas) and **Monthly KPA** (Key Performance Areas). This gives management-level users a clear snapshot of departmental performance metrics at a glance.",
+      },
+      {
+        heading: "Daily KRA",
+        description:
+          "The Daily KRA section provides a detailed view of daily Key Result Areas assigned to the user.\n\n" +
+          "**Table View**  Shows all daily KRAs refreshed every day.\n" +
+          "**Adding KRAs**  New KRAs can be added by users with sufficient access rights.\n" +
+          "**Completion Tracking**  Users can select a KRA and mark it as completed. Once marked, the entry is moved into the completed table along with the user’s name for accountability.\n\n" +
+          "This ensures that daily activities are continuously tracked, updated, and tied to individual responsibility.",
+      },
+      {
+        heading: "Monthly KPA",
+        description:
+          "The Monthly KPA section provides a broader performance overview at the monthly level.\n\n" +
+          "**Table View**  Displays monthly KPAs that are refreshed at the start of each month.\n" +
+          "**Adding KPAs**  Users with proper access can add new KPAs to the table.\n" +
+          "**Completion Tracking**  KPAs can be marked as completed by the assigned user. Once completed, the entry is logged into the completed table with the user’s name.\n\n" +
+          "This system ensures long-term performance goals are tracked and completed within the designated time frame.",
+      },
+    ],
+  },
+];
+
+
 
 
 
