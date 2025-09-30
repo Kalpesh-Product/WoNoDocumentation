@@ -1,5 +1,6 @@
 // src/components/SalesModuleFlow.jsx
 import React from "react";
+import AppFlow from "./AppFlow";
 
 const renderWithFormatting = (text) => {
   return text.split("\n").map((line, i) => {
@@ -33,11 +34,23 @@ const renderWithFormatting = (text) => {
   });
 };
 
-const SalesModuleFlow = ({ sectionData }) => {
+const SalesModuleFlow = ({ sectionData, steps, edges }) => {
   return (
     <div className="space-y-8 border-l-[1px] border-gray-700">
       {sectionData.map((section) => (
         <div key={section.id} className="rounded-lg bg-transparent">
+          <div className="p-6 pr-20">
+            {steps &&
+              edges &&
+              Array.isArray(steps) &&
+              steps.length > 0 &&
+              Array.isArray(edges) &&
+              edges.length > 0 && (
+                <div>
+                  <AppFlow steps={steps} initialEdges={edges} />
+                </div>
+              )}
+          </div>
           <ul className="space-y-6">
             {section.content.map((item, idx) => (
               <li key={idx} className="rounded-lg p-4">
@@ -47,6 +60,7 @@ const SalesModuleFlow = ({ sectionData }) => {
                 <div className="text-gray-300 leading-relaxed">
                   {renderWithFormatting(item.description)}
                 </div>
+
                 <hr className="mt-10 bg-gray-700 border-gray-700" />
               </li>
             ))}

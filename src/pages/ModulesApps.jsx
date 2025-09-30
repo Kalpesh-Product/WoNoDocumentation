@@ -23,25 +23,31 @@ import {
   visitorsSections,
 } from "../sections/masterFlow";
 import SalesModuleFlow from "../components/ModuleFlow";
+import AppFlow from "../components/AppFlow";
+import { salesSteps, salesInitialEdges, financeSteps, financeInitialEdges, adminSteps, adminInitialEdges, itSteps, itInitialEdges, maintenanceSteps, maintenanceInitialEdges, hrSteps, hrInitialEdges, meetingSteps, meetingInitialEdges, visitorsSteps, visitorsInitialEdges, tasksSteps, tasksInitialEdges, ticketsSteps, ticketsInitialEdges, performanceSteps, performanceInitialEdges, frontendSteps, frontendInitialEdges } from "../sections/appFlow";  
+import sections from "../sections";
 
 const ModulesApps = () => {
   const sections = [
-    { id: "sales", title: "Sales", data: salesSections },
-    { id: "finance", title: "Finance", data: financeSections },
-    { id: "admin", title: "Admin", data: adminSections },
-    { id: "it", title: "IT", data: itSections },
-    { id: "maintenance", title: "Maintenance", data: itSections },
-    { id: "hr", title: "HR", data: hrSections },
-    { id: "frontend", title: "Frontend", data: frontendSections },
-    { id: "meetings", title: "Meetings", data: meetingSections },
-    { id: "visitors", title: "Visitors", data: visitorsSections },
-    { id: "tasks", title: "Tasks", data: tasksSections },
-    { id: "tickets", title: "Tickets", data: ticketsSections },
-    { id: "performance", title: "Performance", data: performanceSections },
+    { id: "sales", title: "Sales", data: salesSections, steps : salesSteps, edges : salesInitialEdges },
+    { id: "finance", title: "Finance", data: financeSections, steps : financeSteps, edges : financeInitialEdges },
+    { id: "admin", title: "Admin", data: adminSections , steps : adminSteps, edges : adminInitialEdges },
+    { id: "it", title: "IT", data: itSections, steps : itSteps, edges : itInitialEdges },
+    { id: "maintenance", title: "Maintenance", data: itSections, steps : maintenanceSteps, edges : maintenanceInitialEdges },
+    { id: "hr", title: "HR", data: hrSections, steps : hrSteps, edges : hrInitialEdges },
+    { id: "frontend", title: "Frontend", data: frontendSections, steps : frontendSteps, edges : frontendInitialEdges },
+    { id: "meetings", title: "Meetings", data: meetingSections, steps :meetingSteps, edges : meetingInitialEdges },
+    { id: "visitors", title: "Visitors", data: visitorsSections, steps : visitorsSteps, edges : visitorsInitialEdges },
+    { id: "tasks", title: "Tasks", data: tasksSections, steps : tasksSteps, edges :tasksInitialEdges },
+    { id: "tickets", title: "Tickets", data: ticketsSections, steps : ticketsSteps, edges : ticketsInitialEdges },
+    { id: "performance", title: "Performance", data: performanceSections, steps : performanceSteps, edges : performanceInitialEdges },
   ];
 
   return (
     <div className="grid grid-cols-6 relative max-w-7xl mx-auto text-white gap-8 h-screen overflow-auto">
+      <div className="col-span-6">
+        
+      </div>
       {/* Sidebar */}
       <aside className="sticky col-span-1 top-6 h-fit self-start">
         <h2 className="text-xl font-bold mb-4">Index</h2>
@@ -124,7 +130,7 @@ const ModulesApps = () => {
               <h1 className="text-white text-4xl font-bold mb-6">
                 {section.title}
               </h1>
-              <SalesModuleFlow sectionData={section.data} />
+              <SalesModuleFlow sectionFlow={section.flow} sectionData={section.data} steps={section.steps} edges={section.edges} />
               <hr className="mt-10 bg-gray-700 border-dashed border-white" />
             </div>
           ))}
